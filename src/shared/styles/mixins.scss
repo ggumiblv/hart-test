@@ -1,0 +1,7 @@
+@mixin font($fz, $fw, $lh) {
+    font-family: 'NotoSans', sans-serif;
+    font-size: $fz;
+    font-weight: $fw;
+    line-height: $lh;
+  }
+  

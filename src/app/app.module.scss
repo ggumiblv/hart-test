@@ -1,0 +1,10 @@
+@import '@styles/variables';
+@import '@styles/fonts';
+@import '@styles/typography';
+
+
+.app {
+  @extend %h1;
+  text-align: center;
+}
+

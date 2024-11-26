@@ -1,0 +1,39 @@
+@import './mixins';
+
+  %h1 {
+    @include font($fz: 50px, $fw: 600, $lh: 68.1px);
+  }
+
+  %h1-mobile {
+    @include font($fz: 40px, $fw: 600, $lh: 54.48px);
+  }
+  
+  %h2 {
+    @include font($fz: 24px, $fw: 500, $lh: 32.69px);
+  }
+
+  %h3 {
+    @include font($fz: 24px, $fw: 400, $lh: 32.69px);
+  }
+  
+  %h3-bold {
+    @include font($fz: 24px, $fw: 700, $lh: 32.69px);
+  }
+
+  %body-l {
+    @include font($fz: 20px, $fw: 400, $lh: 27.24px);
+  }
+
+  %body-m {
+    @include font($fz: 16px, $fw: 400, $lh: 21.79px);
+  }
+ 
+  %body-s-bold {
+    @include font($fz: 18px, $fw: 700, $lh: 24.52px);
+  }
+
+  %buttons {
+    @include font($fz: 18px, $fw: 600, $lh: 24.52px);
+  }
+  
+  
