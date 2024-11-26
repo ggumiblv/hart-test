@@ -1,0 +1,19 @@
+@import '@styles/variables';
+@import '@styles/fonts';
+@import '@styles/typography';
+
+.link {
+    @extend %h3;
+    color: $primary-color;
+  
+    &:hover {
+      color: $secondary-color;
+    }
+  
+    &:active {
+      color: $secondary-color;
+    }
+  
+   
+  }
+  

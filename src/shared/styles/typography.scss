@@ -35,5 +35,9 @@
   %buttons {
     @include font($fz: 18px, $fw: 600, $lh: 24.52px);
   }
+
+  %buttons-s {
+    @include font($fz: 14px, $fw: 400, $lh: 19.07px);
+  }
   
   

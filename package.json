@@ -10,6 +10,7 @@
     "@types/node": "^16.18.120",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
+    "classnames": "^2.5.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
@@ -17,10 +18,10 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-  "start": "react-app-rewired start",
-  "build": "react-app-rewired build",
-  "test": "react-app-rewired test"
-},
+    "start": "react-app-rewired start",
+    "build": "react-app-rewired build",
+    "test": "react-app-rewired test"
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -40,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@types/classnames": "^2.3.4",
     "@types/node-sass": "^4.11.8",
     "customize-cra": "^1.0.0",
     "react-app-rewired": "^2.2.1",
