@@ -1,55 +1,20 @@
-import { useState } from "react";
+
+import Footer from "../shared/ui/footer";
+import Header from "../shared/ui/header";
+import InfoCard from "../shared/ui/info-card";
 import styles from "./app.module.scss";
-import Input from "../shared/ui/input";
 
 function App() {
-  const [inputValue, setInputValue] = useState<string>("");
 
   return (
-    <div className={styles.app}>
-      <div>
-        <h2>Example Form</h2>
+    <div className={styles.page}>
+      
+< Header />
 
-        <Input
-          theme="light"
-          size="input"
-          placeholder="Enter text"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-        />
-        <br/>
-        <br/>
+<InfoCard text={"Заказная разработка программного обеспечения"} />
+<Footer />      
+</div>
 
-        <Input
-          theme="light"
-          size="textarea"
-          placeholder="Enter text"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-        />
-
-        <Input
-          theme="dark"
-          size="input"
-          placeholder="Enter text"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-        />
-        
-        <br/>
-        <br/>
-
-        <Input
-          theme="dark"
-          size="textarea"
-          placeholder="Enter text"
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-        />
-
-        <br />
-      </div>
-    </div>
   );
 }
 

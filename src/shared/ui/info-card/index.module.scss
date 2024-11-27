@@ -1,0 +1,28 @@
+@import '@styles/variables';
+@import '@styles/fonts';
+@import '@styles/typography';
+
+
+.infoCard {
+  width: 335px; 
+  height: 100px;
+  padding: 17px 34px;
+  background-color: $primary-color; 
+  opacity: 0.1; 
+  border-left: 3px solid $secondary-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+
+  p {
+    margin: 0;
+    font-size: 16px;
+    color: $secondary-color;
+  }
+
+  @media (min-width: 700px) {
+    width: 482px;
+  }
+}

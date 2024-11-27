@@ -3,9 +3,16 @@
 @import '@styles/typography';
 
 
-.app {
-  @extend %h1;
+.page {  
+  margin: 0 auto;
   text-align: center;
-  background-color: rgb(151, 127, 127);
+  position: relative;
+  width: 1440px;
 }
 
+@media (max-width: 700px) {
+  .page {
+  width: 375px;
+  padding: 20px;
+}
+}

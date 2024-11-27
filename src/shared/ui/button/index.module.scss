@@ -21,11 +21,13 @@
     }
   
     &.ghost {
-      @extend %body-s-bold;
+      @extend %buttons;
       background: transparent;
       color: $primary-color;
       border: none;
       padding: 0;
+      border-bottom: 4px solid transparent;
+
 
       &:hover {
         border-bottom: 4px solid $primary-color;
@@ -93,6 +95,11 @@
         color: $secondary-color;
         background-color: $black-light;
       }
+    }
+
+    &.menu {
+      background-color: transparent;
+      border: none;
     }
   }
   

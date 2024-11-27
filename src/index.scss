@@ -9,19 +9,24 @@
 }
 
 :root {
-  font-family: 'NotoSans', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'NotoSans', system-ui, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-  color: black;
-  background-color: #fff;
+  color: $primary-color;
+  background-color: $black-light;
   font-synthesis: none;
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  background-image: url('shared/assets/icons/background.svg');
+  // background-size: cover; 
+  background-repeat: no-repeat; 
+  // background-position: center;
 }
 
 #root {
-  max-width: 1920px;
+  max-width: 1440px;
   margin: 0 auto;
   padding: 20px 0;
   text-align: center;
