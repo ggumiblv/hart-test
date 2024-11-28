@@ -1,0 +1,65 @@
+.cardsContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    &:hover .cardsContainer_swiper_card {
+      filter: grayscale(100%) blur(3px); /* Применяем фильтр ко всем карточкам */
+      transition: filter 0.3s ease;
+    }
+  }
+  
+  .cardsContainer_swiper_card {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+    transition: filter 0.3s ease;
+  
+    &:hover {
+      filter: none !important; /* Отключаем фильтр для активной карточки */
+      z-index: 2; /* Повышаем z-index для улучшенного выделения */
+    }
+  }
+
+.cardsContainer {
+  width: 100%;
+  height: 534px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.customScrollbar_container {
+  position: relative;
+  display: flex;
+  width: 790px;
+  height: 20px;
+  background-color: #000;
+  margin: 0 0 0 410px;
+}
+
+.customScrollbar svg {
+  position: absolute;
+  left: 4%;
+  width: 20px;
+  height: 20px;
+  transform: translateX(35%);
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-slide:hover {
+  filter: none;
+  z-index: 1;
+}
