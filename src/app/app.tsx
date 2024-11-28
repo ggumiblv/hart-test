@@ -1,7 +1,8 @@
 
 import Footer from "../shared/ui/footer";
 import Header from "../shared/ui/header";
-import InfoCard from "../shared/ui/info-card";
+import DepartmentsWidget from "../widgets/departments-widget";
+import StartBlock from "../widgets/start-widget";
 import styles from "./app.module.scss";
 
 function App() {
@@ -10,8 +11,8 @@ function App() {
     <div className={styles.page}>
       
 < Header />
-
-<InfoCard text={"Заказная разработка программного обеспечения"} />
+<StartBlock />
+<DepartmentsWidget />
 <Footer />      
 </div>
 

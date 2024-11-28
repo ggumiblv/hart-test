@@ -1,4 +1,11 @@
-@font-face {
+  @font-face {
+    font-family: 'NotoSans';
+    src: url('../assets/fonts/NotoSans-Thin.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+  }
+
+  @font-face {
     font-family: 'NotoSans';
     src: url('../assets/fonts/NotoSans-Regular.ttf') format('truetype');
     font-weight: 400;

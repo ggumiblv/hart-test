@@ -1,7 +1,7 @@
 @import './mixins';
 
   %h1 {
-    @include font($fz: 50px, $fw: 600, $lh: 68.1px);
+    @include font($fz: 50px, $fw: 500, $lh: 68.1px);
   }
 
   %h1-mobile {
@@ -38,6 +38,10 @@
 
   %buttons-s {
     @include font($fz: 14px, $fw: 400, $lh: 19.07px);
+  }
+  
+  %background {
+    @include font($fz: 72px, $fw: 200, $lh: 98.06px);
   }
   
   

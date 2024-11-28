@@ -1,0 +1,51 @@
+@import '@styles/variables';
+@import '@styles/fonts';
+@import '@styles/typography';
+
+.newsCard {
+  width: 380px;
+  height: 172px;
+  background-color: transparent;
+  text-align: start;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  @media (max-width: 700px) {
+    width: 335px;
+    min-height: 167px;
+  }
+}
+
+.newsCard_title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.newsCard_title_date {
+  @extend %body-m;
+  color: $gray;
+  margin: 0 0 0px 0;
+}
+
+.newsCard_title_title {
+  @extend %body-l;
+  margin: 0 0 10px 0;
+
+  &.primary {
+    color: $primary-color; 
+  }
+
+  &.secondary {
+    color: $secondary-color; 
+  }
+}
+
+.newsCard_text {
+  @extend %body-m;
+  color: $primary-color; 
+  margin: 0;
+}

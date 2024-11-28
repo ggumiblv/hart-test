@@ -1,0 +1,142 @@
+@import "@styles/variables";
+@import "@styles/fonts";
+@import "@styles/typography";
+
+.startBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: 40px;
+  z-index: 10;
+  text-align: start;
+
+  @media (min-width: 700px) {
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 143px 0 125px 0;
+  }
+}
+
+.startBlock_title {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  margin-bottom: 112px;
+
+  .startBlock_title_h {
+    flex-wrap: wrap;
+    text-align: start;
+  }
+
+  .desktopWords {
+    display: flex;
+
+    @media (max-width: 700px) {
+      display: none !important;
+    }
+  }
+
+  .mobileWords {
+    @media (max-width: 700px) {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    @media (min-width: 700px) {
+      display: none !important;
+    }
+
+    svg {
+      margin-right: 10px;
+    }
+
+    .wordWithIcon {
+        display: flex;
+        gap: 11px;
+    }
+  }
+
+  .words {
+    @extend %h3;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 21px;
+
+    span {
+      font-size: 25px;
+      color: $primary-color;
+    }
+
+    svg {
+      width: 40px;
+      height: 40px;
+      fill: $secondary-color;
+    }
+  }
+}
+
+.startBlock_info {
+  display: grid;
+  flex-direction: column;
+  
+  width: 100%;
+  z-index: 10;
+
+  @media (max-width: 700px) {
+  gap: 21px;
+  }
+
+  @media (min-width: 700px) {
+  grid-template-columns: 47% 39%;
+  grid-template-rows: 1fr 1fr;
+  gap: 28px;
+  }
+
+}
+
+.startBlock::after {
+  @extend %background;
+  content: "WEB\A MOBILE APPS\A BLOCKCHAIN DEV\A GAMEDEV\A DESIGN";
+  white-space: pre-wrap;
+  letter-spacing: 0.02em;
+  text-align: left;
+  color: $blue;
+  text-transform: lowercase;
+  z-index: -10;
+  margin: -95px 0 0 594px;
+  opacity: 30%;
+  position: absolute;
+}
+
+//mobile
+@media (max-width: 701px) {
+  .startBlock_title_h {
+    @include font($fz: 40px, $fw: 600, $lh: 54.48px);
+    min-width: 287px;
+    min-height: 216px;
+  }
+
+  .startBlock {
+    margin: 123px 0 152px 0;
+    width: 285px;
+  }
+
+  .startBlock_title {
+    margin-bottom: 79px;
+  }
+
+  .startBlock::after {
+    content: '';
+  }
+}
+
+@media (min-width: 700px) {
+  .startBlock_title_h {
+    @include font($fz: 50px, $fw: 500, $lh: 68.1px);
+    max-width: 688px;
+    max-height: 128px;
+  }
+}
