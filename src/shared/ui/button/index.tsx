@@ -3,21 +3,35 @@ import classNames from "classnames";
 import styles from "./index.module.scss";
 import CrossIcon from "../../assets/icons/cross-icon";
 import CrossIconHover from "../../assets/icons/cross-icon-hover";
-import MenuIcon from "../../assets/icons/menu-icon"; 
+import MenuIcon from "../../assets/icons/menu-icon";
 
-export type ButtonType = "ghost" | "light" | "cross" | "dark" | "circle" | "menu"; 
+export type ButtonType =
+  | "ghost"
+  | "light"
+  | "cross"
+  | "dark"
+  | "circle"
+  | "menu";
+export type ButtonTheme = "white" | "black";
 
 interface ButtonProps {
   type: ButtonType;
   title?: string;
   disabled?: boolean;
+  theme?: ButtonTheme;
   onClick?: () => void;
 }
 
-const Button: React.FC<ButtonProps> = ({ type, title, disabled = false, onClick }) => {
+const Button: React.FC<ButtonProps> = ({
+  type,
+  title,
+  disabled = false,
+  theme = "white",
+  onClick,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
 
-  const buttonClass = classNames(styles.button, styles[type], {
+  const buttonClass = classNames(styles.button, styles[type], styles[theme], {
     [styles.disabled]: disabled,
   });
 
@@ -40,7 +54,7 @@ const Button: React.FC<ButtonProps> = ({ type, title, disabled = false, onClick 
           <CrossIcon width="20" height="20" stroke="black" />
         )
       ) : type === "menu" ? (
-        <MenuIcon width="24" height="24" /> 
+        <MenuIcon width="24" height="24" />
       ) : (
         title
       )}

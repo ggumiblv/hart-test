@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./index.module.scss";
-import DepartmentCard from "../../shared/ui/department-card";
-import ArrowRightIcon from "../../shared/assets/icons/arrow-right-icon";
-import Button from "../../shared/ui/button";
+import DepartmentCard from "../../ui/department-card";
+import ArrowRightIcon from "../../assets/icons/arrow-right-icon";
+import Button from "../../ui/button";
 
-const DepartmentsWidget: React.FC = () => {
+const DepartmentsBlock: React.FC = () => {
   return (
     <div className={styles.widget}>
       <div className={styles.widget_grid}>
@@ -46,4 +46,4 @@ const DepartmentsWidget: React.FC = () => {
   );
 };
 
-export default DepartmentsWidget;
+export default DepartmentsBlock;

@@ -1,11 +1,10 @@
-@import '@styles/variables';
-@import '@styles/fonts';
-@import '@styles/typography';
-
+@import "@styles/variables";
+@import "@styles/fonts";
+@import "@styles/typography";
 
 .infoCard {
   @extend %h2;
-  width: 482px; 
+  width: 482px;
   height: 100px;
   padding: 17px 28px;
   background-color: rgba($primary-color, 0.1);
@@ -24,21 +23,16 @@
     width: 341px;
     display: flex;
     text-align: start;
-  } 
-}
-
- @media (max-width: 700px) {
-    .infoCard {
-      @include font($fz: 20px, $fw: 400, $lh: 27.24px);
-      padding: 17px 22px;
-      width: 331px;
   }
-    p {
-      width: 277px !important;
-    }
 }
 
-
-
-
-
+@media (max-width: 700px) {
+  .infoCard {
+    @include font($fz: 20px, $fw: 400, $lh: 27.24px);
+    padding: 17px 22px;
+    width: 331px;
+  }
+  .infoCard p {
+    width: 277px !important;
+  }
+}

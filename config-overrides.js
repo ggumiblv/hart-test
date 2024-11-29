@@ -1,8 +1,8 @@
-const path = require('path');
-const { override, addWebpackAlias } = require('customize-cra');
+const path = require("path");
+const { override, addWebpackAlias } = require("customize-cra");
 
 module.exports = override(
   addWebpackAlias({
-    '@styles': path.resolve(__dirname, 'src/shared/styles'),
-  })
+    "@styles": path.resolve(__dirname, "src/shared/styles"),
+  }),
 );

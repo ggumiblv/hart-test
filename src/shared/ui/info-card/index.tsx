@@ -1,5 +1,5 @@
-import React from 'react';
-import styles from './index.module.scss';
+import React from "react";
+import styles from "./index.module.scss";
 
 interface InfoCardProps {
   text: string;
@@ -14,8 +14,6 @@ const InfoCard: React.FC<InfoCardProps> = ({ text }) => {
 };
 
 export default InfoCard;
-
-
 
 // <InfoCard text={"Заказная разработка программного обеспечения"} /> <br />
 // <InfoCard text={"Цифровая трансформация бизнеса и государства"} /> <br />

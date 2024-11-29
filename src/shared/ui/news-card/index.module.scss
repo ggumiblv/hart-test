@@ -1,14 +1,12 @@
-@import '@styles/variables';
-@import '@styles/fonts';
-@import '@styles/typography';
+@import "@styles/variables";
+@import "@styles/fonts";
+@import "@styles/typography";
 
 .newsCard {
   width: 380px;
-  height: 172px;
   background-color: transparent;
   text-align: start;
   display: flex;
-  justify-content: space-between;
   gap: 10px;
   flex-direction: column;
   box-sizing: border-box;
@@ -17,12 +15,17 @@
     width: 335px;
     min-height: 167px;
   }
+
+  @media (min-width: 700px) {
+    height: 172px;
+    justify-content: space-between;
+  }
 }
 
 .newsCard_title {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .newsCard_title_date {
@@ -36,16 +39,20 @@
   margin: 0 0 10px 0;
 
   &.primary {
-    color: $primary-color; 
+    color: $primary-color;
   }
 
   &.secondary {
-    color: $secondary-color; 
+    color: $secondary-color;
   }
 }
 
 .newsCard_text {
   @extend %body-m;
-  color: $primary-color; 
+  color: $primary-color;
   margin: 0;
+
+  @media (min-width: 700px) {
+    letter-spacing: 0.2px;
+  }
 }

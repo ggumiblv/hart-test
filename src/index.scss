@@ -1,6 +1,6 @@
-@import '@styles/variables';
-@import '@styles/fonts';
-@import '@styles/typography';
+@import "@styles/variables";
+@import "@styles/fonts";
+@import "@styles/typography";
 
 *,
 *::before,
@@ -9,7 +9,7 @@
 }
 
 :root {
-  font-family: 'NotoSans', system-ui, Helvetica, Arial, sans-serif;
+  font-family: "NotoSans", system-ui, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color: $primary-color;
@@ -18,10 +18,10 @@
   text-rendering: optimizelegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
-  background-image: url('shared/assets/icons/background.svg');
-  // background-size: cover; 
-  background-repeat: no-repeat; 
+
+  background-image: url("shared/assets/icons/background.svg");
+  // background-size: cover;
+  background-repeat: no-repeat;
   // background-position: center;
 }
 
@@ -38,6 +38,11 @@ a {
 
 a:hover {
   color: inherit;
+}
+
+p {
+  margin: 0;
+  padding: 0;
 }
 
 body {

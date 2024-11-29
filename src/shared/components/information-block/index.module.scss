@@ -1,0 +1,62 @@
+@import "@styles/variables";
+@import "@styles/fonts";
+@import "@styles/typography";
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+
+  @media (max-width: 700px) {
+    flex-direction: column;
+    width: 335px;
+    height: 902px;
+    margin: -50px 0 119px 0;
+  }
+
+  @media (min-width: 700px) {
+    width: 1098px;
+    height: 330px;
+    margin: 0 0 121px -3px;
+  }
+}
+
+.leftBlock {
+  align-self: flex-start;
+  @extend %h3-bold;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  display: flex;
+  gap: 36px;
+  flex-direction: column;
+  letter-spacing: 0.5px;
+
+  @media (max-width: 700px) {
+    width: 99%;
+  }
+
+  @media (min-width: 700px) {
+    width: 31%;
+  }
+}
+
+.rightBlock {
+  @extend %body-m;
+
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+  text-align: left;
+
+  letter-spacing: 0.1px;
+
+  @media (max-width: 700px) {
+    padding: 0px 0px 0 0;
+  }
+
+  @media (min-width: 700px) {
+    width: 54%;
+    padding: 0px 5px 0 8px;
+  }
+}

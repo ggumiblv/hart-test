@@ -17,7 +17,14 @@ const FooterIcon = forwardRef<SVGSVGElement, FooterIconProps>(
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <rect x="1" y="1" width="18" height="18" stroke={stroke} strokeWidth="2" />
+      <rect
+        x="1"
+        y="1"
+        width="18"
+        height="18"
+        stroke={stroke}
+        strokeWidth="2"
+      />
       <rect
         x="1.70711"
         y="17.7234"
@@ -28,7 +35,7 @@ const FooterIcon = forwardRef<SVGSVGElement, FooterIconProps>(
         stroke={stroke}
       />
     </svg>
-  )
+  ),
 );
 
 export default FooterIcon;

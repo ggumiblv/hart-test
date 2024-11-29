@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC } from "react";
 
 type CrossIconHoverProps = {
   width?: string;
@@ -7,9 +7,9 @@ type CrossIconHoverProps = {
 };
 
 const CrossIconHover: FC<CrossIconHoverProps> = ({
-  width = '20',
-  height = '20',
-  stroke = '#131516',
+  width = "20",
+  height = "20",
+  stroke = "#131516",
 }) => (
   <svg
     width={width}

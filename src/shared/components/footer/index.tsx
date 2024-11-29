@@ -1,6 +1,6 @@
 import React from "react";
 import FooterIcon from "../../assets/icons/footer-icon";
-import Button from "../button";
+import Button from "../../ui/button";
 import IgIcon from "../../assets/icons/ig-icon";
 import VkIcon from "../../assets/icons/vk-icon";
 import FbIcon from "../../assets/icons/fb-icon";
@@ -59,8 +59,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className={styles.footer_copyright}>
-          © 2021 – White Frame,
-          Все права защищены.
+          © 2021 – White Frame, Все права защищены.
         </div>
       </div>
     </footer>

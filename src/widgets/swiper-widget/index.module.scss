@@ -34,7 +34,6 @@
   position: relative;
   overflow: hidden;
   margin-bottom: 85px;
-
 }
 
 .swiper {
@@ -43,14 +42,13 @@
 }
 
 .container {
-    display: flex;
-    align-items: end;
-   
+  display: flex;
+  align-items: end;
 
-    @media (max-width: 700px) {
-       margin-bottom: -64px;
-        gap: 20px;
-      }
+  @media (max-width: 700px) {
+    margin-bottom: -64px;
+    gap: 20px;
+  }
 }
 
 .customScrollbar {
@@ -80,22 +78,22 @@
 
 .swiper-scrollbar-horizontal,
 .swiper-scrollbar {
-    display: none !important;
+  display: none !important;
 }
 
 @media (max-width: 700px) {
-   .swiper-wrapper {
+  .swiper-wrapper {
     display: flex;
-    gap: 10px}
+    gap: 10px;
   }
+}
 
-  .cardsContainer .swiper-slide {
-    margin-right: 15px !important; 
+.cardsContainer .swiper-slide {
+  margin-right: 15px !important;
+}
+
+.cardsContainer_swiper {
+  @media (max-width: 700px) {
+    margin: 0 0 0 -22px;
   }
-
-  .cardsContainer_swiper {
-    @media (max-width: 700px) {
-        margin: 0 0 0 -22px;
-      }
-  }
-
+}

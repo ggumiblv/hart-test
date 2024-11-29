@@ -3,21 +3,23 @@ import classNames from "classnames";
 import styles from "./index.module.scss";
 
 export type Theme = "light" | "dark";
-export type Size = "input" | "textarea"; 
+export type Size = "input" | "textarea";
 
 interface InputProps {
   theme: Theme;
-  size: Size;  
+  size: Size;
   placeholder?: string;
   value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+  onChange?: (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => void;
 }
 
 const Input: React.FC<InputProps> = ({
   theme,
   size,
   placeholder,
-  value = "", 
+  value = "",
   onChange,
 }) => {
   const [isFocused, setIsFocused] = useState(false);
@@ -35,7 +37,7 @@ const Input: React.FC<InputProps> = ({
       <textarea
         className={inputClass}
         placeholder={placeholder}
-        value={value || ""} 
+        value={value || ""}
         onChange={onChange}
         onFocus={handleFocus}
         onBlur={handleBlur}
@@ -47,7 +49,7 @@ const Input: React.FC<InputProps> = ({
     <input
       className={inputClass}
       placeholder={placeholder}
-      value={value || ""} 
+      value={value || ""}
       onChange={onChange}
       onFocus={handleFocus}
       onBlur={handleBlur}

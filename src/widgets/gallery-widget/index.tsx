@@ -43,13 +43,13 @@ const GalleryWidget: React.FC = () => {
           ))}
         </div>
 
-        <div className={styles.logo_container}> 
-            <div className={styles.logo_container_arrow}> 
+        <div className={styles.logo_container}>
+          <div className={styles.logo_container_arrow}>
             <ArrowRightIcon />
-            </div>
-            <div className={styles.logo_container_logo}> 
+          </div>
+          <div className={styles.logo_container_logo}>
             <LogoIcon />
-            </div>
+          </div>
         </div>
       </div>
     </div>

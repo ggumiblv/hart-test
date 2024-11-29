@@ -1,20 +1,18 @@
-@import '@styles/variables';
-@import '@styles/fonts';
-@import '@styles/typography';
+@import "@styles/variables";
+@import "@styles/fonts";
+@import "@styles/typography";
 
-
-.page {  
+.page {
   margin: 0 auto;
   text-align: center;
   position: relative;
-  width: 1440px;  
+  width: 1440px;
   padding: 0 8vw 0 8vw;
 }
 
 @media (max-width: 700px) {
   .page {
-  width: 375px;
-  padding: 8px;
+    width: 375px;
+    padding: 8px;
+  }
 }
-}
-

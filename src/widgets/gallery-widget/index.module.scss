@@ -1,13 +1,17 @@
+@import "@styles/variables";
+@import "@styles/fonts";
+@import "@styles/typography";
+
 .gallery {
   display: flex;
   @media (max-width: 700px) {
     flex-direction: column;
-    
+
     margin-left: -20px;
   }
 
   @media (min-width: 700px) {
-    margin: 0 0 0 -123px;
+    margin: 0 0 98px -110px;
     gap: 32px;
   }
 }
@@ -128,7 +132,7 @@
 }
 
 .active img {
-  border: 3px solid #32cd32;
+  border: 3px solid $secondary-color;
 }
 
 .mainImage img {
@@ -152,6 +156,10 @@
 
   @media (max-width: 700px) {
     margin: 14px 0 0 21px;
+  }
+
+  @media (min-width: 700px) {
+    width: 380px;
   }
 }
 
@@ -179,7 +187,6 @@
       width: 200px;
       height: 27px;
     }
-    
   }
 
   @media (min-width: 700px) {
@@ -193,14 +200,13 @@
 }
 
 .logo_container_arrow {
- position: absolute;
+  position: absolute;
 
   @media (max-width: 700px) {
     margin: 90px 0 0 214px;
   }
 
   @media (min-width: 700px) {
-   
-    margin-left: -209px;
+    margin-left: -131px;
   }
 }

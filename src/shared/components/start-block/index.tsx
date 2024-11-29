@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./index.module.scss";
-import ArrowRightIcon from "../../shared/assets/icons/arrow-right-icon";
-import InfoCard from "../../shared/ui/info-card";
+import ArrowRightIcon from "../../assets/icons/arrow-right-icon";
+import InfoCard from "../../ui/info-card";
 
 const StartBlock: React.FC = () => {
   const words = ["проектируем", "разрабатываем", "внедряем", "сопровождаем"];

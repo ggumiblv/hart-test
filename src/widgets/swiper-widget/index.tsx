@@ -10,7 +10,7 @@ import img8 from "../../shared/assets/images/8img.webp";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/scrollbar"; 
+import "swiper/css/scrollbar";
 
 import SwiperCard from "../../shared/ui/swiper-card";
 import styles from "./index.module.scss";
@@ -21,7 +21,7 @@ import FolderIcon from "../../shared/assets/icons/folder-icon";
 const SwiperCardContainer: React.FC = () => {
   const swiperRef = useRef<any>(null);
   const containerRef = useRef<HTMLDivElement>(null);
-  const scrollbarRef = useRef<SVGSVGElement>(null); 
+  const scrollbarRef = useRef<SVGSVGElement>(null);
 
   const cards = [
     { imageSrc: img1, text: "Приложение учёта физической активности Meditate" },
@@ -110,10 +110,9 @@ const SwiperCardContainer: React.FC = () => {
     <div>
       <div className={styles.container}>
         <FolderIcon />
-      <div className={styles.customScrollbar}>
-        <FooterIcon stroke="#0000FF" ref={scrollbarRef} />
-      </div>
-
+        <div className={styles.customScrollbar}>
+          <FooterIcon stroke="#0000FF" ref={scrollbarRef} />
+        </div>
       </div>
       <div className={styles.cardsContainer} ref={containerRef}>
         <Swiper
@@ -127,10 +126,10 @@ const SwiperCardContainer: React.FC = () => {
           }}
           breakpoints={{
             700: {
-              slidesPerView: 3, 
+              slidesPerView: 3,
             },
             0: {
-              slidesPerView: 1, 
+              slidesPerView: 1,
             },
           }}
         >

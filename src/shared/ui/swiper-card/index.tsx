@@ -1,8 +1,8 @@
-import React from 'react';
-import styles from './index.module.scss';
+import React from "react";
+import styles from "./index.module.scss";
 
 interface SwiperCardProps {
-  imageSrc: string; 
+  imageSrc: string;
   text: string;
 }
 

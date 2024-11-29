@@ -6,9 +6,9 @@
 @import "@styles/fonts";
 
 .widget {
-  background-color:  rgba($black, 0.2);; 
+  background-color: rgba($black, 0.2);
   width: 1380px;
-  height: 410px; 
+  height: 410px;
 
   display: flex;
   flex-direction: column;
@@ -49,14 +49,14 @@
     }
 
     .widget_arrow {
-      transform: rotate(0deg); 
+      transform: rotate(0deg);
     }
   }
 
   .widget_button {
     display: flex;
     justify-content: center;
-    height: 60px;    
+    height: 60px;
     margin-top: auto;
     margin-bottom: 11px;
   }
@@ -70,28 +70,25 @@
     padding: 0 0 0 20px;
 
     .widget_grid {
-      grid-template-columns: 1fr; 
+      grid-template-columns: 1fr;
       gap: 29px;
     }
-    .widget_button{
-        width: 335px !important;
-      }
+    .widget_button {
+      width: 335px !important;
+    }
 
     .widget_info {
-      flex-direction: column; 
+      flex-direction: column;
       align-items: flex-start;
       width: 335px;
       gap: 18px;
       margin-bottom: -10px;
 
       svg {
-        transform: rotate(90deg); 
+        transform: rotate(90deg);
         align-self: end;
         margin-right: 4px;
       }
-
-      
-      
     }
   }
 }
