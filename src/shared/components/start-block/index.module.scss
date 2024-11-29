@@ -110,7 +110,6 @@
   position: absolute;
 }
 
-//mobile
 @media (max-width: 701px) {
   .startBlock_title_h {
     @include font($fz: 40px, $fw: 600, $lh: 54.48px);

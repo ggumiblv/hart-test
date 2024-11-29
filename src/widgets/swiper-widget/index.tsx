@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import img1 from "../../shared/assets/images/1img.webp";
 import img2 from "../../shared/assets/images/2img.webp";
 import img3 from "../../shared/assets/images/3img.webp";
@@ -34,7 +34,6 @@ const SwiperCardContainer: React.FC = () => {
     { imageSrc: img8, text: "Приложение учёта физической активности Meditate" },
   ];
 
-  // Функция для обновления позиции кастомного скроллбара
   const updateScrollbar = () => {
     const swiperInstance = swiperRef.current?.swiper;
     const scrollbar = scrollbarRef.current;

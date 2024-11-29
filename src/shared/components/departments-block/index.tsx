@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./index.module.scss";
 import DepartmentCard from "../../ui/department-card";
 import ArrowRightIcon from "../../assets/icons/arrow-right-icon";
 import Button from "../../ui/button";
+import FeedbackPopup from "../feedback-popup"; 
 
 const DepartmentsBlock: React.FC = () => {
+  const [isPopupOpen, setIsPopupOpen] = useState(false); 
+
+  const handleOpenPopup = () => {
+    setIsPopupOpen(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupOpen(false);
+  };
+
   return (
     <div className={styles.widget}>
       <div className={styles.widget_grid}>
@@ -39,9 +50,11 @@ const DepartmentsBlock: React.FC = () => {
         </div>
 
         <div className={styles.widget_button}>
-          <Button type="light" title="Свяжитесь с нами" />
+          <Button type="light" title="Свяжитесь с нами" onClick={handleOpenPopup} />
         </div>
       </div>
+
+      {isPopupOpen && <FeedbackPopup isOpen={isPopupOpen} onClose={handleClosePopup} />}
     </div>
   );
 };
