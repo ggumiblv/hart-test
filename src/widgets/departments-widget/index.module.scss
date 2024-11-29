@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin: 0 0 60px -125px;
+  margin: 0 0 106px -125px;
 
   & > * {
     width: 100%;
@@ -29,7 +29,7 @@
     @media (min-width: 700px) {
       grid-template-columns: repeat(4, 22%);
       margin-bottom: 20px;
-      column-gap: 26px;
+      column-gap: 33px;
       row-gap: 56px;
     }
   }
@@ -66,7 +66,7 @@
   .widget {
     width: 375px;
     height: auto;
-    margin: 0 0 0 -20px;
+    margin: 0 0 139px -20px;
     padding: 0 0 0 20px;
 
     .widget_grid {

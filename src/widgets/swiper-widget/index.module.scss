@@ -1,27 +1,30 @@
 .cardsContainer {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0 0 -6px;
+
+  @media (min-width: 700px) {
     &:hover .cardsContainer_swiper_card {
-      filter: grayscale(100%) blur(3px); /* Применяем фильтр ко всем карточкам */
+      filter: grayscale(100%) blur(3px);
       transition: filter 0.3s ease;
     }
   }
-  
-  .cardsContainer_swiper_card {
-    display: flex;
-    justify-content: center;
-    position: relative;
-    z-index: 1;
-    transition: filter 0.3s ease;
-  
-    &:hover {
-      filter: none !important; /* Отключаем фильтр для активной карточки */
-      z-index: 2; /* Повышаем z-index для улучшенного выделения */
-    }
+}
+
+.cardsContainer_swiper_card {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  transition: filter 0.3s ease;
+
+  &:hover {
+    filter: none !important;
+    z-index: 2;
   }
+}
 
 .cardsContainer {
   width: 100%;
@@ -30,6 +33,8 @@
   align-items: center;
   position: relative;
   overflow: hidden;
+  margin-bottom: 85px;
+
 }
 
 .swiper {
@@ -37,29 +42,60 @@
   height: 100%;
 }
 
-.customScrollbar_container {
+.container {
+    display: flex;
+    align-items: end;
+   
+
+    @media (max-width: 700px) {
+       margin-bottom: -64px;
+        gap: 20px;
+      }
+}
+
+.customScrollbar {
   position: relative;
   display: flex;
   width: 790px;
   height: 20px;
   background-color: #000;
-  margin: 0 0 0 410px;
+  margin: 0 0 0 371px;
+
+  @media (max-width: 700px) {
+    width: 274px;
+    margin: 0;
+  }
 }
 
 .customScrollbar svg {
   position: absolute;
-  left: 4%;
   width: 20px;
   height: 20px;
   transform: translateX(35%);
+
+  @media (max-width: 700px) {
+    transform: translateX(50%);
+  }
 }
 
-.swiper-slide {
-  display: flex;
-  justify-content: center;
+.swiper-scrollbar-horizontal,
+.swiper-scrollbar {
+    display: none !important;
 }
 
-.swiper-slide:hover {
-  filter: none;
-  z-index: 1;
-}
+@media (max-width: 700px) {
+   .swiper-wrapper {
+    display: flex;
+    gap: 10px}
+  }
+
+  .cardsContainer .swiper-slide {
+    margin-right: 15px !important; 
+  }
+
+  .cardsContainer_swiper {
+    @media (max-width: 700px) {
+        margin: 0 0 0 -22px;
+      }
+  }
+

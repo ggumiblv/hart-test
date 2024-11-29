@@ -5,6 +5,7 @@ import DepartmentsWidget from "../widgets/departments-widget";
 import StartBlock from "../widgets/start-widget";
 import styles from "./app.module.scss";
 import SwiperCardContainer from "../widgets/swiper-widget";
+import GalleryWidget from "../widgets/gallery-widget";
 
 function App() {
 
@@ -15,6 +16,7 @@ function App() {
 <StartBlock />
 <DepartmentsWidget />
 <SwiperCardContainer />
+<GalleryWidget />
 <Footer />      
 </div>
 
