@@ -4,7 +4,7 @@
 Клонируйте его с GitHub:<br/>
 `$ git clone https://github.com/ggumiblv/hart-test.git`<br/>
 Перейдите в папку с проектом<br/>
-cd hart-test<br/>
+`cd hart-test`<br/>
 Установите зависимости <br/>
 `$ npm install`<br/>
 Запустите локальный сервер:<br/>
