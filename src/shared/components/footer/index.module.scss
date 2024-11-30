@@ -10,15 +10,6 @@
     display: flex;
   }
 
-  & .footer_social_icons {
-    display: flex;
-    justify-content: center;
-
-    svg {
-      fill: $primary-color;
-    }
-  }
-
   & .footer_info {
     a {
       display: block;
@@ -92,15 +83,6 @@
     gap: 34px;
     width: 335px;
   }
-
-  .footer_social_icons {
-    margin: 5px 0 0 0;
-    padding: 0;
-    gap: 29px;
-  }
-
-
-
 }
 
 @media (min-width: 700px) {
@@ -114,7 +96,7 @@
 
   .footer_top {
     display: grid;
-    grid-template-columns: 7% 65% 18%;
+    grid-template-columns: 7% 72% 18%;
     align-items: center;
     gap: 20px;
   }
@@ -142,26 +124,18 @@
     gap: 4.1%;
   }
 
-  .footer_social_icons {
-    gap: 40%;
-    padding: 10px 0 0 10vw;
+  .footer_nav_links::before {
+    content: "";
+    position: absolute;
+    top: 3905px;
+    left: 895px;
+    width: 105px;
+    height: 75px;
+    background-image: url("../../assets/icons/img3.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: scale(2);
+    z-index: -100;
   }
-
-  
-.footer_nav_links::before {
-  content: "";
-  position: absolute;
-  top: 3905px;
-  left: 895px;
-  width: 105px;
-  height: 75px;
-  background-image: url("../../assets/icons/img3.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  transform:  scale(2);
-  z-index: -100;
 }
-
-}
-

@@ -11,10 +11,6 @@
     border: none;
   }
 
-  &:hover {
-    cursor: url("../../assets/icons/cursor.svg"), auto;
-  }
-
   &.disabled {
     cursor: not-allowed;
     opacity: 0.5;

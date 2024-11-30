@@ -18,26 +18,24 @@
   }
 }
 
-@media (min-width: 700px) { 
-
-.container::after {
-  content: "";
-  position: absolute;
-  top: 2951px;
-  left: 56px;
-  width: 100px;
-  height: 852px;
-  background-image: url("../../assets/icons/img.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  transform: rotate(0deg) scale(2);
-  z-index: -100;
+@media (min-width: 700px) {
+  .container::after {
+    content: "";
+    position: absolute;
+    top: 2951px;
+    left: 56px;
+    width: 100px;
+    height: 852px;
+    background-image: url("../../assets/icons/img.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: rotate(0deg) scale(2);
+    z-index: -100;
+  }
 }
-}
 
-@media (max-width: 700px) { 
-
+@media (max-width: 700px) {
   .container::after {
     content: "";
     position: absolute;
@@ -52,9 +50,7 @@
     transform: rotate(0deg) scale(1.5);
     z-index: -100;
   }
-  }
-  
-
+}
 
 .iconContainer {
   display: flex;

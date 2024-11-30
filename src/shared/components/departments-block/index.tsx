@@ -4,11 +4,11 @@ import DepartmentCard from "../../ui/department-card";
 import ArrowRightIcon from "../../assets/icons/arrow-right-icon";
 import Button from "../../ui/button";
 import FeedbackPopup from "../feedback-popup";
-import SuccessPopup from "../success-popup"; 
+import SuccessPopup from "../success-popup";
 
 const DepartmentsBlock: React.FC = () => {
-  const [isPopupOpen, setIsPopupOpen] = useState(false); 
-  const [isSuccessPopupOpen, setIsSuccessPopupOpen] = useState(false); 
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isSuccessPopupOpen, setIsSuccessPopupOpen] = useState(false);
 
   const handleOpenPopup = () => {
     setIsPopupOpen(true);
@@ -19,7 +19,7 @@ const DepartmentsBlock: React.FC = () => {
   };
 
   const handleCloseSuccessPopup = () => {
-    setIsSuccessPopupOpen(false); 
+    setIsSuccessPopupOpen(false);
   };
 
   return (
@@ -56,11 +56,24 @@ const DepartmentsBlock: React.FC = () => {
         </div>
 
         <div className={styles.widget_button}>
-          <Button type="light" title="Свяжитесь с нами" onClick={handleOpenPopup} />
+          <Button
+            type="light"
+            title="Свяжитесь с нами"
+            onClick={handleOpenPopup}
+          />
         </div>
       </div>
 
-      {isPopupOpen && <FeedbackPopup isOpen={isPopupOpen} onClose={handleClosePopup} onSubmit={() => { setIsSuccessPopupOpen(true); setIsPopupOpen(false); }} />}
+      {isPopupOpen && (
+        <FeedbackPopup
+          isOpen={isPopupOpen}
+          onClose={handleClosePopup}
+          onSubmit={() => {
+            setIsSuccessPopupOpen(true);
+            setIsPopupOpen(false);
+          }}
+        />
+      )}
 
       {isSuccessPopupOpen && <SuccessPopup onClose={handleCloseSuccessPopup} />}
     </div>

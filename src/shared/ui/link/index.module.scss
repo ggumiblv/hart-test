@@ -3,11 +3,12 @@
 @import "@styles/typography";
 
 .link {
-  @extend %h3;
+  @extend %body-m;
   color: $primary-color;
 
   &:hover {
     color: $secondary-color;
+    text-decoration: underline;
   }
 
   &:active {

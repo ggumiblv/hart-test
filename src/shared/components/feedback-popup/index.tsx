@@ -7,10 +7,14 @@ import Input from "../../ui/input";
 interface FeedbackPopupProps {
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: () => void; 
+  onSubmit: () => void;
 }
 
-const FeedbackPopup: React.FC<FeedbackPopupProps> = ({ isOpen, onClose, onSubmit }) => {
+const FeedbackPopup: React.FC<FeedbackPopupProps> = ({
+  isOpen,
+  onClose,
+  onSubmit,
+}) => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [comment, setComment] = useState("");
@@ -26,7 +30,7 @@ const FeedbackPopup: React.FC<FeedbackPopupProps> = ({ isOpen, onClose, onSubmit
     if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto"; 
+      document.body.style.overflow = "auto";
     }
 
     return () => {
@@ -35,7 +39,7 @@ const FeedbackPopup: React.FC<FeedbackPopupProps> = ({ isOpen, onClose, onSubmit
     };
   }, [isOpen]);
 
-  if (!isOpen) return null; 
+  if (!isOpen) return null;
 
   const handleSubmit = () => {
     console.log({

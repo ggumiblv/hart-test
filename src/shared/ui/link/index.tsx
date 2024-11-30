@@ -1,42 +1,17 @@
-// import React from "react";
-// import classNames from "classnames";
-// import styles from "./index.module.scss";
+import React from "react";
+import styles from "./index.module.scss";
 
-// interface LinkProps {
-//   href: string;
-//   title?: string;
-//   onClick?: () => void;
-//   className?: string;
-//   target?: "_blank" | "_self" | "_parent" | "_top";
-// }
+interface LinkProps {
+  text: string;
+  href: string;
+}
 
-// const Link: React.FC<LinkProps> = ({
-//   href,
-//   title,
-//   onClick,
-//   className,
-//   target = "_self",
-// }) => {
-//   const linkClass = classNames(styles.link, className);
+const Link: React.FC<LinkProps> = ({ text, href }) => {
+  return (
+    <a href={href} className={styles.link}>
+      {text}
+    </a>
+  );
+};
 
-//   const handleClick = () => {
-//     if (onClick) {
-//       onClick();
-//     }
-//   };
-
-//   return (
-//     <a
-//       href={href}
-//       className={linkClass}
-//       onClick={handleClick}
-//       aria-label={title}
-//       target={target}
-//       rel={target === "_blank" ? "noopener noreferrer" : undefined}
-//     >
-//       {title}
-//     </a>
-//   );
-// };
-
-// export default Link;
+export default Link;

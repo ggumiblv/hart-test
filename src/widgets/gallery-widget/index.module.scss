@@ -16,8 +16,6 @@
   }
 }
 
-
-
 .thumbnails {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -214,51 +212,50 @@
 }
 
 @media (min-width: 700px) {
-  
   .logo_container::before {
-  content: "";
-  position: absolute;
-  top: -103px;
-  left: 345px;
-  width: 100px;
-  height: 100px;
-  background-image: url("../../shared/assets/icons/img2.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  transform: rotate(180deg) scale(1.5);
-  z-index: -100;
-}
+    content: "";
+    position: absolute;
+    top: -103px;
+    left: 345px;
+    width: 100px;
+    height: 100px;
+    background-image: url("../../shared/assets/icons/img2.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: rotate(180deg) scale(1.5);
+    z-index: -100;
+  }
 
-.gallery::before {
-  content: "";
-  position: absolute;
-  top: 1850px;
-  left: 610px;
-  width: 742px;
-  height: 852px;
-  background-image: url("../../shared/assets/icons/background2.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  transform: rotate(90deg) ;
-  z-index: -100;
-}
+  .gallery::before {
+    content: "";
+    position: absolute;
+    top: 1850px;
+    left: 610px;
+    width: 742px;
+    height: 852px;
+    background-image: url("../../shared/assets/icons/background2.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: rotate(90deg);
+    z-index: -100;
+  }
 
-.gallery::after {
-  content: "";
-  position: absolute;
-  top: 1842px;
-  left: 485px;
-  width: 100px;
-  height: 852px;
-  background-image: url("../../shared/assets/icons/img.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  transform: rotate(270deg) scale(2);
-  z-index: -100;
-}
+  .gallery::after {
+    content: "";
+    position: absolute;
+    top: 1842px;
+    left: 485px;
+    width: 100px;
+    height: 852px;
+    background-image: url("../../shared/assets/icons/img.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    transform: rotate(270deg) scale(2);
+    z-index: -100;
+  }
 }
 
 @media (max-width: 700px) {
@@ -288,11 +285,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    transform: rotate(90deg) ;
+    transform: rotate(90deg);
     z-index: -100;
   }
-
-
 }
-
-
