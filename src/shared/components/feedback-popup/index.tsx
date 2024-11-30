@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./index.module.scss";
 import ArrowRightIcon from "../../assets/icons/arrow-right-icon";
 import Button from "../../ui/button";
@@ -7,13 +7,14 @@ import Input from "../../ui/input";
 interface FeedbackPopupProps {
   isOpen: boolean;
   onClose: () => void;
+  onSubmit: () => void; 
 }
 
-const FeedbackPopup: React.FC<FeedbackPopupProps> = ({ isOpen, onClose }) => {
+const FeedbackPopup: React.FC<FeedbackPopupProps> = ({ isOpen, onClose, onSubmit }) => {
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [comment, setComment] = useState("");
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 700); // Определяем, мобильное устройство или нет
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,7 +26,7 @@ const FeedbackPopup: React.FC<FeedbackPopupProps> = ({ isOpen, onClose }) => {
     if (isOpen) {
       document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = "auto";
+      document.body.style.overflow = "auto"; 
     }
 
     return () => {
@@ -34,7 +35,7 @@ const FeedbackPopup: React.FC<FeedbackPopupProps> = ({ isOpen, onClose }) => {
     };
   }, [isOpen]);
 
-  if (!isOpen) return null;
+  if (!isOpen) return null; 
 
   const handleSubmit = () => {
     console.log({
@@ -42,9 +43,12 @@ const FeedbackPopup: React.FC<FeedbackPopupProps> = ({ isOpen, onClose }) => {
       phone,
       comment,
     });
+
     setName("");
     setPhone("");
     setComment("");
+
+    onSubmit();
   };
 
   return (
@@ -78,7 +82,7 @@ const FeedbackPopup: React.FC<FeedbackPopupProps> = ({ isOpen, onClose }) => {
             <div className={styles.column}>
               <Input
                 theme="light"
-                size={isMobile ? "input" : "textarea"} // Меняем размер в зависимости от ширины экрана
+                size={isMobile ? "input" : "textarea"}
                 placeholder="Комментарий"
                 value={comment}
                 onChange={(e) => setComment(e.target.value)}

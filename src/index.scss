@@ -20,9 +20,7 @@
   -moz-osx-font-smoothing: grayscale;
 
   background-image: url("shared/assets/icons/background.svg");
-  // background-size: cover;
   background-repeat: no-repeat;
-  // background-position: center;
 }
 
 #root {
@@ -50,6 +48,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  overflow-x: hidden; 
 }
 
 button {

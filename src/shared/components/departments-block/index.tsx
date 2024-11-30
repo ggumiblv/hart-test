@@ -3,10 +3,12 @@ import styles from "./index.module.scss";
 import DepartmentCard from "../../ui/department-card";
 import ArrowRightIcon from "../../assets/icons/arrow-right-icon";
 import Button from "../../ui/button";
-import FeedbackPopup from "../feedback-popup"; 
+import FeedbackPopup from "../feedback-popup";
+import SuccessPopup from "../success-popup"; 
 
 const DepartmentsBlock: React.FC = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false); 
+  const [isSuccessPopupOpen, setIsSuccessPopupOpen] = useState(false); 
 
   const handleOpenPopup = () => {
     setIsPopupOpen(true);
@@ -14,6 +16,10 @@ const DepartmentsBlock: React.FC = () => {
 
   const handleClosePopup = () => {
     setIsPopupOpen(false);
+  };
+
+  const handleCloseSuccessPopup = () => {
+    setIsSuccessPopupOpen(false); 
   };
 
   return (
@@ -54,7 +60,9 @@ const DepartmentsBlock: React.FC = () => {
         </div>
       </div>
 
-      {isPopupOpen && <FeedbackPopup isOpen={isPopupOpen} onClose={handleClosePopup} />}
+      {isPopupOpen && <FeedbackPopup isOpen={isPopupOpen} onClose={handleClosePopup} onSubmit={() => { setIsSuccessPopupOpen(true); setIsPopupOpen(false); }} />}
+
+      {isSuccessPopupOpen && <SuccessPopup onClose={handleCloseSuccessPopup} />}
     </div>
   );
 };

@@ -16,10 +16,10 @@
 
   @media (min-width: 701px) {
     height: 97px;
-    margin: 27px 0 0 7vw;
     display: grid;
     grid-template-columns: 32% 69%;
-    width: 1200px;
+    width: 100%;
+    background-color: rgba($black, 0.2);
   }
 }
 
@@ -30,6 +30,11 @@
 .header_logo {
   display: flex;
   align-items: center;
+
+  
+  @media (min-width: 700px) {
+    margin-left: 73px;
+  }
 }
 
 .header_nav {
@@ -48,7 +53,7 @@
   .header_nav_links {
     display: flex;
     justify-content: space-between;
-    width: 100%;
+    width: 85%;
 
     .header_nav_links_centered {
       display: flex;
@@ -98,7 +103,7 @@
     gap: 27px;
     margin-top: 40px;
     align-items: center;
-    margin-bottom: 140px;
+    margin-bottom: 14vh;
 
     button {
       width: max-content;
@@ -125,5 +130,5 @@
 
 .close_button {
   text-align: end;
-  margin: 26px -5px 3px 0;
+  margin: 26px 10px 3px 0;
 }

@@ -98,6 +98,9 @@
     padding: 0;
     gap: 29px;
   }
+
+
+
 }
 
 @media (min-width: 700px) {
@@ -106,7 +109,7 @@
     flex-direction: column;
     width: 100%;
     gap: 37px;
-    margin: 0 0 0 -4px;
+    margin: 0 0 125px -4px;
   }
 
   .footer_top {
@@ -143,4 +146,22 @@
     gap: 40%;
     padding: 10px 0 0 10vw;
   }
+
+  
+.footer_nav_links::before {
+  content: "";
+  position: absolute;
+  top: 3905px;
+  left: 895px;
+  width: 105px;
+  height: 75px;
+  background-image: url("../../assets/icons/img3.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transform:  scale(2);
+  z-index: -100;
 }
+
+}
+
