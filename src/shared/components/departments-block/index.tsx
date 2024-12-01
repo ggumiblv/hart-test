@@ -4,11 +4,11 @@ import DepartmentCard from "../../ui/department-card";
 import ArrowRightIcon from "../../assets/icons/arrow-right-icon";
 import Button from "../../ui/button";
 import FeedbackPopup from "../feedback-popup";
-import SuccessPopup from "../success-popup";
+// import SuccessPopup from "../success-popup";
 
 const DepartmentsBlock: React.FC = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [isSuccessPopupOpen, setIsSuccessPopupOpen] = useState(false);
+  // const [isSuccessPopupOpen, setIsSuccessPopupOpen] = useState(false);
 
   const handleOpenPopup = () => {
     setIsPopupOpen(true);
@@ -18,9 +18,9 @@ const DepartmentsBlock: React.FC = () => {
     setIsPopupOpen(false);
   };
 
-  const handleCloseSuccessPopup = () => {
-    setIsSuccessPopupOpen(false);
-  };
+  // const handleCloseSuccessPopup = () => {
+  //   setIsSuccessPopupOpen(false);
+  // };
 
   return (
     <div className={styles.widget}>
@@ -69,13 +69,13 @@ const DepartmentsBlock: React.FC = () => {
           isOpen={isPopupOpen}
           onClose={handleClosePopup}
           onSubmit={() => {
-            setIsSuccessPopupOpen(true);
+            // setIsSuccessPopupOpen(true);
             setIsPopupOpen(false);
           }}
         />
       )}
 
-      {isSuccessPopupOpen && <SuccessPopup onClose={handleCloseSuccessPopup} />}
+      {/* {isSuccessPopupOpen && <SuccessPopup onClose={handleCloseSuccessPopup} />} */}
     </div>
   );
 };

@@ -7,7 +7,7 @@ import Input from "../../ui/input";
 interface FeedbackPopupProps {
   isOpen: boolean;
   onClose: () => void;
-  onSubmit: () => void;
+  onSubmit: () => void;  
 }
 
 const FeedbackPopup: React.FC<FeedbackPopupProps> = ({
@@ -19,6 +19,8 @@ const FeedbackPopup: React.FC<FeedbackPopupProps> = ({
   const [phone, setPhone] = useState("");
   const [comment, setComment] = useState("");
   const [isMobile, setIsMobile] = useState(window.innerWidth < 700);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   useEffect(() => {
     const handleResize = () => {
@@ -41,19 +43,33 @@ const FeedbackPopup: React.FC<FeedbackPopupProps> = ({
 
   if (!isOpen) return null;
 
-  const handleSubmit = () => {
-    console.log({
-      name,
-      phone,
-      comment,
-    });
-
-    setName("");
-    setPhone("");
-    setComment("");
-
-    onSubmit();
+  const handleSubmit = async () => {
+    setLoading(true);
+    setError(""); 
+  
+    try {
+      const response = await mockFetchRequest({ name, phone, comment });
+  
+      if (response.status === 200) {
+        console.log('успех');
+        onSubmit();
+      } else {
+        setError("error");
+      }
+    } catch (err) {
+      setError("error");
+    } finally {
+      setLoading(false);
+    }
   };
+  
+  const mockFetchRequest = (data: { name: string; phone: string; comment: string }) => {
+    return new Promise<{ status: number }>((resolve) => {
+      setTimeout(() => {
+        resolve({ status: 200 });  
+      }, 1500); 
+    });
+  };  
 
   return (
     <div className={styles.popupOverlay}>
@@ -93,8 +109,14 @@ const FeedbackPopup: React.FC<FeedbackPopupProps> = ({
               />
             </div>
             <div className={styles.column}>
-              <Button type="dark" title="Отправить" onClick={handleSubmit} />
+              <Button
+                type="dark"
+                title={loading ? "Отправка..." : "Отправить"}
+                onClick={handleSubmit}
+                disabled={loading}
+              />
             </div>
+            {error && <div className={styles.errorMessage}>{error}</div>}
           </div>
         </div>
       </div>
