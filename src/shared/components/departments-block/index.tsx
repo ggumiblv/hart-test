@@ -4,11 +4,11 @@ import DepartmentCard from "../../ui/department-card";
 import ArrowRightIcon from "../../assets/icons/arrow-right-icon";
 import Button from "../../ui/button";
 import FeedbackPopup from "../feedback-popup";
-import SuccessPopup from "../success-popup"; // Убедитесь, что этот компонент существует
+import SuccessPopup from "../success-popup"; 
 
 const DepartmentsBlock: React.FC = () => {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
-  const [isSuccessPopupOpen, setIsSuccessPopupOpen] = useState(false); // Состояние для попапа успеха
+  const [isSuccessPopupOpen, setIsSuccessPopupOpen] = useState(false); 
 
   const handleOpenPopup = () => {
     setIsPopupOpen(true);
@@ -70,7 +70,7 @@ const DepartmentsBlock: React.FC = () => {
           onClose={handleClosePopup}
           onSubmit={() => {
             setIsPopupOpen(false);
-            setIsSuccessPopupOpen(true); // Открываем попап успеха
+            setIsSuccessPopupOpen(true);
           }}
         />
       )}
